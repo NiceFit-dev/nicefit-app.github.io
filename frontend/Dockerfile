@@ -1,0 +1,18 @@
+# frontend/Dockerfile
+FROM node:18
+
+WORKDIR /app
+
+# Copiar package.json y package-lock.json para instalar dependencias
+COPY package.json package-lock.json ./
+
+RUN npm install
+
+# Copiar el resto del código fuente
+COPY . .
+
+# Exponer el puerto en el que Vite corre en modo desarrollo (5173)
+EXPOSE 5173
+
+# Comando para ejecutar Vite en modo desarrollo
+CMD ["npm", "run", "dev", "--", "--host"]
