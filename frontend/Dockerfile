@@ -4,9 +4,11 @@ FROM node:18
 WORKDIR /app
 
 # Copiar package.json y package-lock.json para instalar dependencias
-COPY package*.json .
+COPY package*.json ./
 
 RUN npm install
+
+RUN npm install react-router-dom
 
 # Copiar el resto del código fuente
 COPY . .
@@ -15,4 +17,4 @@ COPY . .
 EXPOSE 5173
 
 # Comando para ejecutar Vite en modo desarrollo
-CMD ["npm", "run", "dev", "--", "--host"]
+CMD ["npm", "run", "dev", "--", "--host 0.0.0.0"]
