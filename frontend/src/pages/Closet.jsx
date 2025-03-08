@@ -5,6 +5,7 @@ function Closet(){
         <div>
             <h1>Closet</h1>
             <p>Este es tu closet o armario</p>
+            
         </div>
     )
 }
