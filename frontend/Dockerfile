@@ -17,4 +17,5 @@ COPY . .
 EXPOSE 5173
 
 # Comando para ejecutar Vite en modo desarrollo
-CMD ["npm", "run", "dev", "--", "--host 0.0.0.0"]
+CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
+
