@@ -1,25 +1,62 @@
-/* Navbar.css */
+/* Estilos generales del navbar */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: white;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .navbar-links {
-    display: flex;
-    gap: 20px;
-    font-size: 14px;
-    text-transform: uppercase;
-    font-family: serif;
-  }
-  
-  .navbar-links a {
-    text-decoration: none;
-    color: black;
-  }
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 40px;
+}
 
+/* Primera fila: título, búsqueda e iconos */
+.navbar-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
 
-  
+/* Título NiceFit */
+.navbar-title {
+  font-size: 22px;
+  font-weight: bold;
+  font-family: serif;
+}
+
+/* Barra de búsqueda */
+.navbar-search {
+  flex-grow: 1;
+  max-width: 500px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 14px;
+  margin: 0 20px;
+}
+
+/* Iconos de carrito y usuario */
+.navbar-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Segunda fila: links de navegación */
+.navbar-links {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 8px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: serif;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}

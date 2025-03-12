@@ -1,16 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../styles/Navbar.css"
+import "../styles/Navbar.css";
 
 function Navbar() {
   return (
     <nav className="navbar">
+      <div className="navbar-top">
+        <div className="navbar-title">NiceFit</div>
+        <input type="text" className="navbar-search" placeholder="Search for products..." />
+        <div className="navbar-icons">
+          <span className="icon">🛒</span>  
+          <span className="icon">👤</span>
+        </div>
+      </div>
       <ul className="navbar-links">
-        <li><Link to="/">Inicio</Link></li>
-        <li><Link to="/about">Sobre Nosotros</Link></li>
-        <li><Link to="/contact">Contacto</Link></li>
-        <li><Link to="/closet">Closet</Link></li>
-        <li><Link to="/marketplace">Marketplace</Link></li>
+        <li><Link to="/marketplace">MARKETPLACE</Link></li>
+        <li><Link to="/closet">ARMARIO</Link></li>
+        <li><Link to="/">HOME</Link></li>
       </ul>
     </nav>
   );
