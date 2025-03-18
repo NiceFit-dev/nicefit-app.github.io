@@ -1,6 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
 import CheckboxSelect from "../components/Filter";
-
+//import M_Jacket_1 from "../assets/Ropa_Armario/Jacket/Man/M_Jacket_1.jpg";
+import Products from "../components/Print/";
 
 const App = () => {
     const options = [ 
@@ -12,15 +13,28 @@ const App = () => {
 
     const handlesSelection = (selectedItems) => {
         console.log("Selected items:", selectedItems);
+
     };
+    
+
+    
     return (
+    <>
         <div> 
             <h1>Closet</h1>
-            <p>Este es tu closet o aramario</p>
-            <CheckboxSelect options={options} label="Select cloting" onApply={handlesSelection}/>
+            <p>Este es tu closet o armario</p>
+            <CheckboxSelect options={options} label="Select clothing" onApply={handlesSelection}/>
+            
         </div>
+        <div>
+               <Products />
+        </div>
+        
+    
+    </>
     );
 };
 
 export default App;
+
 
