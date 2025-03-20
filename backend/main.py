@@ -1,17 +1,29 @@
-from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
+from fastapi import FastAPI, HTTPException
+import httpx
 
 app = FastAPI()
+BASE_URL = "https://api.escuelajs.co/api/v1/products"
 
-# Configuración de CORS
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],  # Permite todas las URLs. Para mayor seguridad, cámbialo a ["http://localhost:4173"]
-    allow_credentials=True,
-    allow_methods=["*"],  # Permite todos los métodos (GET, POST, etc.)
-    allow_headers=["*"],  # Permite todos los headers
-)
+@app.get("/products")
+async def get_products():
+    try:
+        async with httpx.AsyncClient() as client:
+            response = await client.get(BASE_URL)
+            response.raise_for_status()
+            return response.json()
+    except httpx.HTTPStatusError as e:
+        raise HTTPException(status_code=e.response.status_code, detail="Error fetching products")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
-@app.get("/")
-async def root():
-    return {"message": "Hello, world !"}
+@app.get("/products/{product_id}")
+async def get_product(product_id: int):
+    try:
+        async with httpx.AsyncClient() as client:
+            response = await client.get(f"{BASE_URL}/{product_id}")
+            response.raise_for_status()
+            return response.json()
+    except httpx.HTTPStatusError as e:
+        raise HTTPException(status_code=e.response.status_code, detail="Product not found")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
