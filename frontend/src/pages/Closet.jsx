@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import CheckboxSelect from "../components/Filter";
-//import M_Jacket_1 from "../assets/Ropa_Armario/Jacket/Man/M_Jacket_1.jpg";
-import Products from "../components/Print/";
+import Localimagelist from "../components/Print";
+
 
 const App = () => {
     const options = [ 
@@ -15,9 +15,7 @@ const App = () => {
         console.log("Selected items:", selectedItems);
 
     };
-    
 
-    
     return (
     <>
         <div> 
@@ -26,8 +24,9 @@ const App = () => {
             <CheckboxSelect options={options} label="Select clothing" onApply={handlesSelection}/>
             
         </div>
+        
         <div>
-               <Products />
+            < Localimagelist />
         </div>
         
     
