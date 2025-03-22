@@ -1,18 +1,24 @@
 import React, {useState} from "react";
 import CheckboxSelect from "../components/Filter";
-import Localimagelist from "../components/Print";
-
+import { datageneral } from "../components/Print";
 
 const App = () => {
     const options = [ 
-        {value: "jeans", label: "jeans"},
-        {value: "shirt", label:"shirt"},
-        {value: "jacket", label:"jacket"},
-        {value:"shoes", label:"shoes"}
+        {value: "Jeans", label: "Jeans"},
+        {value: "Shirt", label:"Shirt"},
+        {value: "Jacket", label:"Jacket"},
+        {value:"Shoes", label:"Shoes"}
     ];
+    const [SelectedCategories, setSeletecCategories] = useState([]); // Estado para almacenar selección de filtros
 
+    // Filtrar los productos según la categoría seleccionada
+    const filteredProduct = SelectedCategories.length > 0
+        ? datageneral.filter(datageneral => SelectedCategories.includes(datageneral.category))
+        :datageneral;
+
+    // Función que actualiza la selección
     const handlesSelection = (selectedItems) => {
-        console.log("Selected items:", selectedItems);
+        setSeletecCategories(selectedItems);
 
     };
 
@@ -24,10 +30,12 @@ const App = () => {
             <CheckboxSelect options={options} label="Select clothing" onApply={handlesSelection}/>
             
         </div>
-        
-        <div>
-            < Localimagelist />
-        </div>
+            {filteredProduct.map((datageneral) => (
+                <div
+                    key={datageneral.id} >
+                        <img src={datageneral.url} alt={datageneral.name}/>
+                </div>
+            ))}
         
     
     </>
