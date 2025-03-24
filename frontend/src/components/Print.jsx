@@ -28,13 +28,13 @@ import W_Shoes_3 from "../assets/Ropa_Armario/Shoes/Woman/W_Shoes_3.jpg"
 //Creando la lista de imágenes
 
 export const datageneral = [{
-    id:0, 
+    id: 1, 
     name: "MJacket1",
     category: "Jacket",
     url: M_Jacket_1
     
 }, {
-    id: 1,
+    id: 2,
     name: "MJacket2",
     category: "Jacket",
     url: M_Jacket_2
@@ -117,35 +117,35 @@ export const datageneral = [{
 }, {
     id: 18,
     name: "WShoes3",
-    caetgory: "Shoes",
+    category: "Shoes",
     url: W_Shoes_3
 }, {
-    id: 14, 
+    id: 19, 
     name: "MShirt1",
     category: "Shirt",
     url: M_Shirt_1
 }, {
-    id: 15, 
+    id: 20, 
     name: "MShirt2",
     category: "Shirt",
     url: M_Shirt_2
 }, {
-    id: 16, 
+    id: 21, 
     name: "MShirt3",
     category: "Shirt",
     url: M_Shirt_3
 }, {
-    id: 17, 
+    id: 22, 
     name: "WShirt1", 
     category: "Shirt", 
     url: W_Shirt_1
 }, {
-    id: 18,
+    id: 23,
     name: "WShirt2", 
     category: "Shirt", 
     url: W_Shirt_2
 }, {
-    id: 19, 
+    id: 24, 
     name: "WShirt3", 
     category: "Shirt",
     url: W_Shirt_3

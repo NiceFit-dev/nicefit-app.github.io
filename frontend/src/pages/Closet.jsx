@@ -33,7 +33,7 @@ const App = () => {
             {filteredProduct.map((datageneral) => (
                 <div
                     key={datageneral.id} >
-                        <img src={datageneral.url} alt={datageneral.name}/>
+                        <img src={datageneral.url} alt={datageneral.category}/>
                 </div>
             ))}
         
