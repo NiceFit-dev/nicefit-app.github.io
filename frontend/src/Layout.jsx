@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Footer from "./components/footer";
+import Footer from "./components/Footer.jsx";
 import "./styles/Layout.css"; // Asegúrate de importar el CSS
 
 //Aquí se maneja la estructura de la pagina, lo que mantienen en todo momento el header, navbar, footer, entre otros.
