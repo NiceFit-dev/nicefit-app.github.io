@@ -1,6 +1,6 @@
 import React from "react";
 import { createBrowserRouter } from "react-router-dom";
-import Layout from "../components/Layout";
+import Layout from "../Layout";
 //Agregar una pagina
 import Home from "../pages/Home";
 import About from "../pages/About";
