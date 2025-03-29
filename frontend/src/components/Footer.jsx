@@ -1,5 +1,9 @@
 import React from "react";
 import "../styles/Footer.css";
+import Facebook_Logo from "../assets/Img-Pag/Facebook_Logo.png"
+import x_logo_black from "../assets/Img-Pag/x_logo_black.png"
+import Instagram_Real from "../assets/Img-Pag/Instagram_Real.png"
+import yt_icon_rgb from "../assets/Img-Pag/yt_icon_rgb.png"
 
 const Footer = () => {
   return (
@@ -14,10 +18,11 @@ const Footer = () => {
           <p>Dress Nice | Live Nice</p>
           <div className="social-icons">
             {/* Aquí puedes agregar íconos de redes sociales */}
-            <span className="icon">🔵</span>
-            <span className="icon">⚫</span>
-            <span className="icon">🔴</span>
-            <span className="icon">⚪</span>
+            <img src={Facebook_Logo} height={20} ></img>
+            <img src={x_logo_black} height={20}></img>
+            <img src={yt_icon_rgb} height={20}></img>
+            <img src={Instagram_Real} height={20}/>
+            <img />
           </div>
         </div>
 
