@@ -1,9 +1,6 @@
-import httpx
-from fastapi import HTTPException
-from bs4 import BeautifulSoup
+# Importar módulo de scrapy
 
 URL = " "
 
 async def scrape_product(url: str):
-    
     pass
