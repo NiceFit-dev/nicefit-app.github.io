@@ -9,17 +9,16 @@ const App = () => {
         {value: "Jacket", label:"Jacket"},
         {value:"Shoes", label:"Shoes"}
     ];
-    //const [SelectedCategories, setSeletecCategories] = useState([]); // Estado para almacenar selección de filtros
+    const [SelectedCategories, setSeletecCategories] = useState([]); // Estado para almacenar selección de filtros
 
     // Filtrar los productos según la categoría seleccionada
-    //const filteredProduct = SelectedCategories.length > 0
-    //    ? datageneral.filter(datageneral => SelectedCategories.includes(datageneral.category))
-    //    :datageneral;
+    const filteredProduct = SelectedCategories.length > 0
+        ? datageneral.filter(datageneral => SelectedCategories.includes(datageneral.category))
+        :datageneral;
 
     // Función que actualiza la selección
     const handlesSelection = (selectedItems) => {
-      console.log("Selected items:", selectedItems);
-        //setSeletecCategories(selectedItems);
+        setSeletecCategories(selectedItems);
 
     };
 
@@ -31,19 +30,16 @@ const App = () => {
             <CheckboxSelect options={options} label="Select clothing" onApply={handlesSelection}/>
             
         </div>
-
-
             {filteredProduct.map((datageneral) => (
-                
-        <div>
-            < Localimagelist />
-        </div>
-
-
+                <div
+                    key={datageneral.id} >
+                        <img src={datageneral.url} alt={datageneral.name}/>
+                </div>
+            ))}
+        
+    
     </>
     );
 };
 
 export default App;
-
-
