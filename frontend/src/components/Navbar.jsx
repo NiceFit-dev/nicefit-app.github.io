@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/Navbar.css";
-
+import carrito from "../assets/Img-Pag/carrito.png"
 function Navbar() {
   return (
     <nav className="navbar">
@@ -9,7 +9,7 @@ function Navbar() {
         <div className="navbar-title">NiceFit</div>
         <input type="text" className="navbar-search" placeholder="Search for products..." />
         <div className="navbar-icons">
-          <span className="icon">🛒</span>  
+          <img src={carrito} height={30}></img>
           <span className="icon">👤</span>
         </div>
       </div>

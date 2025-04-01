@@ -1,11 +1,48 @@
-import React from "react";
+import React, {useState} from "react";
+import CheckboxSelectMKT from "../components/Filter-Mkt";
+import { datageneralMKT } from "../components/Print-Mkt";
 
-function Marketplace(){
-    return(
-        <div>
+
+const AppMKT = () => {
+    const optionsMKT = [ 
+        {value: "Jeans", label: "Jeans"},
+        {value: "Shirt", label:"Shirt"},
+        {value: "Jacket", label:"Jacket"},
+        {value:"Shoes", label:"Shoes"}
+    ];
+    const [SelectedCategoriesMKT, setSeletecCategoriesMKT] = useState([]); // Estado para almacenar selección de filtros
+
+    // Filtrar los productos según la categoría seleccionada
+     // Filtrar los productos según la categoría seleccionada
+     const filteredProductMKT = SelectedCategoriesMKT.length > 0
+     ? datageneralMKT.filter(datageneralMKT => SelectedCategoriesMKT.includes(datageneralMKT.category))
+     :datageneralMKT;
+
+    // Función que actualiza la selección
+    const handlesSelectionMKT = (selectedItems) => {
+        setSeletecCategoriesMKT(selectedItems);
+
+    };
+
+    return (
+    <>
+        <div> 
             <h1>Marketplace</h1>
-            <p>Aquí puedes comprar ropa que simplemente es un nice fit para ti</p>
+            <p>Este es tu marketplace</p>
+            <CheckboxSelectMKT options={optionsMKT} label="Select clothing" onApply={handlesSelectionMKT}/>
+            
         </div>
-    )
-}
-export default Marketplace;
+        {filteredProductMKT.map((datageneralMKT) => (
+                <div
+                    key={datageneralMKT.id} >
+                        <img src={datageneralMKT.url} alt={datageneralMKT.category}/>
+                </div>
+            ))}
+          
+        
+    
+    </>
+    );
+};
+
+export default AppMKT;
