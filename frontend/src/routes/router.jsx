@@ -7,6 +7,7 @@ import About from "../pages/About";
 import Contact from "../pages/Contact";
 import Closet from "../pages/Closet";
 import Marketplace from "../pages/Marketplace";
+import Mix from "../pages/Mix"; 
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
       { path: "/contact", element: <Contact /> },
       {path: "/closet", element: <Closet/>},
       {path: "/marketplace", element: <Marketplace/>},
+      {path: "/mix", element: <Mix /> },
     ],
   },
 ]);
