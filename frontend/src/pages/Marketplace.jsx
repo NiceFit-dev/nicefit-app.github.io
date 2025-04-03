@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; // Importar useNavigate
 import CheckboxSelectMKT from "../components/Filter-Mkt";
 import { datageneralMKT } from "../components/Print-Mkt";
+import "../styles/Marketplace.css"; // Importar el CSS
 
 const AppMKT = () => {
     const navigate = useNavigate(); // Hook para la navegación
@@ -13,7 +14,7 @@ const AppMKT = () => {
         { value: "Shoes", label: "Shoes" }
     ];
 
-    const [SelectedCategoriesMKT, setSelectedCategoriesMKT] = useState([]); // Estado para almacenar selección de filtros
+    const [SelectedCategoriesMKT, setSelectedCategoriesMKT] = useState([]);
 
     // Filtrar los productos según la categoría seleccionada
     const filteredProductMKT = SelectedCategoriesMKT.length > 0
@@ -31,10 +32,10 @@ const AppMKT = () => {
     };
 
     return (
-        <>
-            <div>
-                <h1>Marketplace</h1>
-                <p>Este es tu marketplace</p>
+        <div className="marketplace-container"> 
+            {/* Sección izquierda - Sidebar con filtros */}
+            <div className="marketplace-sidebar">
+                <h2>Filtrar Ropa</h2>
                 <CheckboxSelectMKT 
                     options={optionsMKT} 
                     label="Select clothing" 
@@ -42,17 +43,23 @@ const AppMKT = () => {
                 />
             </div>
 
-            {filteredProductMKT.map((item) => (
-                <div key={item.id}>
-                    <img 
-                        src={item.url} 
-                        alt={item.category} 
-                        style={{ cursor: "pointer" }} 
-                        onClick={() => handleImageClick(item)} 
-                    />
+            {/* Sección derecha - Galería de imágenes */}
+            <div className="marketplace-content">
+                <h1>Marketplace</h1>
+                <p>Este es tu marketplace</p>
+
+                <div className="marketplace-grid">
+                    {filteredProductMKT.map((item) => (
+                        <img 
+                            key={item.id} 
+                            src={item.url} 
+                            alt={item.category} 
+                            onClick={() => handleImageClick(item)} 
+                        />
+                    ))}
                 </div>
-            ))}
-        </>
+            </div>
+        </div>
     );
 };
 

@@ -1,0 +1,38 @@
+.closet-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+}
+
+.closet-sidebar {
+    width: 25%; /* Ocupa el 25% de la pantalla */
+    padding: 15px;
+    background-color: #f4f4f4; /* Fondo ligero para diferenciar */
+    border-radius: 8px;
+}
+
+.closet-content {
+    width: 75%; /* Ocupa el 75% de la pantalla */
+}
+
+.closet-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.closet-grid img {
+    width: 120px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.closet-grid img:hover {
+    transform: scale(1.1);
+}

@@ -52,12 +52,12 @@ function Mix() {
                         />
                     ))}
                 </div>
-
-                {/* Mostrar la comparación de las prendas seleccionadas */}
+                
+                {/* Mostrar la comparación de las prendas seleccionadas 
                 <MatchClothe 
                     selectedMktClothing={selectedMktClothing} 
                     selectedUserClothing={selectedUserClothing}
-                />
+                />*/}
             </div>
         </div>
     );

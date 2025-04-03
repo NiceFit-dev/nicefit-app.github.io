@@ -1,44 +1,47 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import CheckboxSelect from "../components/Filter";
 import { datageneral } from "../components/Print";
+import "../styles/Closet.css";
 
 const App = () => {
     const options = [ 
-        {value: "Jeans", label: "Jeans"},
-        {value: "Shirt", label:"Shirt"},
-        {value: "Jacket", label:"Jacket"},
-        {value:"Shoes", label:"Shoes"}
+        { value: "Jeans", label: "Jeans" },
+        { value: "Shirt", label: "Shirt" },
+        { value: "Jacket", label: "Jacket" },
+        { value: "Shoes", label: "Shoes" }
     ];
-    const [SelectedCategories, setSeletecCategories] = useState([]); // Estado para almacenar selección de filtros
+    const [SelectedCategories, setSelectedCategories] = useState([]);
 
     // Filtrar los productos según la categoría seleccionada
     const filteredProduct = SelectedCategories.length > 0
-        ? datageneral.filter(datageneral => SelectedCategories.includes(datageneral.category))
-        :datageneral;
+        ? datageneral.filter(item => SelectedCategories.includes(item.category))
+        : datageneral;
 
     // Función que actualiza la selección
-    const handlesSelection = (selectedItems) => {
-        setSeletecCategories(selectedItems);
-
+    const handleSelection = (selectedItems) => {
+        setSelectedCategories(selectedItems);
     };
 
     return (
-    <>
-        <div> 
-            <h1>Closet</h1>
-            <p>Este es tu closet o armario</p>
-            <CheckboxSelect options={options} label="Select clothing" onApply={handlesSelection}/>
-            
-        </div>
-            {filteredProduct.map((datageneral) => (
-                <div
-                    key={datageneral.id} >
-                        <img src={datageneral.url} alt={datageneral.name}/>
+        <div className="closet-container"> 
+            {/* Sección izquierda - Sidebar con filtros */}
+            <div className="closet-sidebar">
+                <h2>Filtrar Ropa</h2>
+                <CheckboxSelect options={options} label="Select clothing" onApply={handleSelection} />
+            </div>
+
+            {/* Sección derecha - Galería de imágenes */}
+            <div className="closet-content">
+                <h1>Closet</h1>
+                <p>Este es tu closet o armario</p>
+
+                <div className="closet-grid">
+                    {filteredProduct.map((item) => (
+                        <img key={item.id} src={item.url} alt={item.name} />
+                    ))}
                 </div>
-            ))}
-        
-    
-    </>
+            </div>
+        </div>
     );
 };
 
