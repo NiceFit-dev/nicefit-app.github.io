@@ -8,9 +8,10 @@ const AppMKT = () => {
     const navigate = useNavigate(); // Hook para la navegación
 
     const optionsMKT = [ 
-        { value: "Jeans", label: "Jeans" },
-        { value: "Shirt", label: "Shirt" },
+        
         { value: "Jacket", label: "Jacket" },
+        { value: "Shirt", label: "Shirt" },
+        { value: "Jeans", label: "Jeans" },
         { value: "Shoes", label: "Shoes" }
     ];
 
@@ -28,7 +29,7 @@ const AppMKT = () => {
 
     // Función para manejar clic en la imagen y redirigir a Mix.jsx con la prenda seleccionada
     const handleImageClick = (item) => {
-        navigate("/mix", { state: { selectedMktClothing: item } }); 
+        navigate("/mix", { state: { selectedMktClothing: item, category: item.category } }); 
     };
 
     return (

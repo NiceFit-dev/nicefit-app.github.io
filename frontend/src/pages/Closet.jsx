@@ -5,9 +5,9 @@ import "../styles/Closet.css";
 
 const App = () => {
     const options = [ 
-        { value: "Jeans", label: "Jeans" },
-        { value: "Shirt", label: "Shirt" },
         { value: "Jacket", label: "Jacket" },
+        { value: "Shirt", label: "Shirt" },
+        { value: "Jeans", label: "Jeans" },
         { value: "Shoes", label: "Shoes" }
     ];
     const [SelectedCategories, setSelectedCategories] = useState([]);
