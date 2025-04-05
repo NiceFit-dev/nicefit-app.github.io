@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import"../styles/Filter.css"
 
 const CheckboxSelect = ({ options, label = "Select an option", onApply }) => {
   const [selectedOptions, setSelectedOptions] = useState([]);

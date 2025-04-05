@@ -1,48 +1,39 @@
 import React, {useState} from "react";
-import CheckboxSelectMKT from "../components/Filter-Mkt";
+import CheckboxSelect from "../components/Filter"; //El mismo que ocupa closet, componente reutilizable!
 import { datageneralMKT } from "../components/Print-Mkt";
 
-
 const AppMKT = () => {
-    const optionsMKT = [ 
-        {value: "Jeans", label: "Jeans"},
-        {value: "Shirt", label:"Shirt"},
-        {value: "Jacket", label:"Jacket"},
-        {value:"Shoes", label:"Shoes"}
-    ];
-    const [SelectedCategoriesMKT, setSeletecCategoriesMKT] = useState([]); // Estado para almacenar selección de filtros
+  const optionsMKT = [ 
+    { value: "Jeans", label: "Jeans" },
+    { value: "Shirt", label: "Shirt" },
+    { value: "Jacket", label: "Jacket" },
+    { value: "Shoes", label: "Shoes" }
+  ];
 
-    // Filtrar los productos según la categoría seleccionada
-     // Filtrar los productos según la categoría seleccionada
-     const filteredProductMKT = SelectedCategoriesMKT.length > 0
-     ? datageneralMKT.filter(datageneralMKT => SelectedCategoriesMKT.includes(datageneralMKT.category))
-     :datageneralMKT;
+  const [selectedCategories, setSelectedCategories] = useState([]);
 
-    // Función que actualiza la selección
-    const handlesSelectionMKT = (selectedItems) => {
-        setSeletecCategoriesMKT(selectedItems);
+  const filteredProduct = selectedCategories.length > 0
+    ? datageneralMKT.filter(item => selectedCategories.includes(item.category))
+    : datageneralMKT;
 
-    };
+  const handleSelection = (selectedItems) => {
+    setSelectedCategories(selectedItems);
+  };
 
-    return (
+  return (
     <>
-        <div> 
-            <h1>Marketplace</h1>
-            <p>Este es tu marketplace</p>
-            <CheckboxSelectMKT options={optionsMKT} label="Select clothing" onApply={handlesSelectionMKT}/>
-            
+      <div>
+        <h1>Marketplace</h1>
+        <p>Este es tu marketplace</p>
+        <CheckboxSelect options={optionsMKT} label="Select clothing" onApply={handleSelection} />
+      </div>
+      {filteredProduct.map((item) => (
+        <div key={item.id}>
+          <img src={item.url} alt={item.category} />
         </div>
-        {filteredProductMKT.map((datageneralMKT) => (
-                <div
-                    key={datageneralMKT.id} >
-                        <img src={datageneralMKT.url} alt={datageneralMKT.category}/>
-                </div>
-            ))}
-          
-        
-    
+      ))}
     </>
-    );
+  );
 };
 
 export default AppMKT;

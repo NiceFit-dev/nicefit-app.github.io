@@ -2,6 +2,7 @@
 .checkbox-select {
     position: relative;
     display: inline-block;
+    background-color: aqua;
   }
   
   .checkbox-select-button {
