@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import "../styles/Filter.css"
+import vectorIcon from "../assets/Vector.png";
 
 const CheckboxSelect = ({ options, label = "Select an option", onApply }) => {
   const [selectedOptions, setSelectedOptions] = useState([]);
@@ -19,18 +21,22 @@ const CheckboxSelect = ({ options, label = "Select an option", onApply }) => {
 
   return (
     <div className="checkbox-select">
-      <h3>{label}</h3>
+      <div className="checkbox-title">
+        <h3>{label}</h3>
+        <img src={vectorIcon} alt="icono filtro" width="24" height="24" />
+      </div>
+
       <ul className="checkbox-list">
         {options.map((option) => (
-          <li key={option.value}>
+          <li key={option.value} className="checkbox-item">
             <label>
+              <span>{option.label}</span>
               <input
                 type="checkbox"
                 value={option.value}
                 checked={selectedOptions.includes(option.value)}
                 onChange={() => handleCheckboxChange(option.value)}
               />
-              {option.label}
             </label>
           </li>
         ))}

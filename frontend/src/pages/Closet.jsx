@@ -27,7 +27,7 @@ const App = () => {
         <div> 
             <h1>Closet</h1>
             <p>Este es tu closet o armario</p>
-            <CheckboxSelect options={options} label="Select clothing" onApply={handlesSelection}/>
+            <CheckboxSelect options={options} label="Filtros" onApply={handlesSelection}/>
             
         </div>
             {filteredProduct.map((datageneral) => (
