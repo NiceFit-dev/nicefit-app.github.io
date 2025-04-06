@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import CheckboxSelect from "../components/Filter";
 import { datageneral } from "../components/Print";
+import "../styles/Closet.css"
 
 const App = () => {
     const options = [ 
@@ -23,22 +24,24 @@ const App = () => {
     };
 
     return (
-    <>
-        <div> 
-            <h1>Closet</h1>
-            <p>Este es tu closet o armario</p>
-            <CheckboxSelect options={options} label="Filtros" onApply={handlesSelection}/>
-            
-        </div>
-            {filteredProduct.map((datageneral) => (
-                <div
-                    key={datageneral.id} >
-                        <img src={datageneral.url} alt={datageneral.name}/>
+        <>
+            <div className="closet">
+                <div>
+                    <h1>Closet</h1>
+                    <p>Este es tu closet o armario</p>
+                    <CheckboxSelect options={options} label="Filtros" onApply={handlesSelection} />
                 </div>
-            ))}
-        
-    
-    </>
+
+                <div className="product-grid">
+                    {filteredProduct.map(product => (
+                        <div key={product.id} className="product-card">
+                            <img src={product.url} alt={product.name} />
+                            <p>{product.name}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </>
     );
 };
 
