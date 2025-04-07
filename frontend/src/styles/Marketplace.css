@@ -1,0 +1,39 @@
+
+.marketplace{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .product-card {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 10px;
+    background-color: white;
+    text-align: center;
+    transition: transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .product-card:hover {
+    transform: scale(1.03);
+  }
+  
+  .product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .product-card p {
+    font-size: 14px;
+    margin-top: 8px;
+    text-transform: uppercase;
+  }
+  
