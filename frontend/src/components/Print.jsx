@@ -29,125 +29,173 @@ import W_Shoes_3 from "../assets/Ropa_Armario/Shoes/Woman/W_Shoes_3.jpg"
 
 export const datageneral = [{
     id: 1, 
-    name: "MJacket1",
+    name: "AG Jacket",
     category: "Jacket",
+    price: "CLP 39.990",
+    size: "L",
     url: M_Jacket_1
     
 }, {
     id: 2,
-    name: "MJacket2",
+    name: "FGT Navy Jacket",
     category: "Jacket",
+    price: "CLP 49.990",
+    size: "XL",
     url: M_Jacket_2
 }, {
     id: 3, 
-    name: "MJacket3",
+    name: "BR Jacket",
     category: "Jacket",
+    price: "CLP 85.990",
+    size: "M",
     url: M_Jacket_3
 },
 {
     id: 4,
-    name: "WJacket1",
+    name: " B Blazer",
     category: "Jacket",
+    price: "CLP 109.990",
+    size: "L",
     url: W_Jacket_1
 
 },{
     id: 5, 
-    name: "WJacket2",
+    name: "Pink Jacket",
     category: "Jacket",
+    price: "CLP 41.990",
+    size: "S",
     url: W_Jacket_2
 }, {
     id:6,
-    name: "WJacket3",
+    name: "Ast Jacket",
     category: "Jacket",
+    price: "CLP 58.990",
+    size: "L",
     url: W_Jacket_3
 }, {
     id: 7,
-    name: "MJeans1",
+    name: "Casual Jeans",
     category: "Jeans",
+    price: "CLP 35.990",
+    size: "36",
     url: M_Jeans_1
 }, {
     id: 8,
-    name: "MJeans2",
+    name: "Navy Jeans",
     category: "Jeans",
+    price: "CLP 41.990",
+    size: "38",
     url: M_Jeans_2
 },{ 
     id: 9,
-    name: "MJens3", 
+    name: "Daily Jeans", 
     category: "Jeans",
+    price: "CLP 45.990",
+    size: "38",
     url: M_Jeans_3
 }, {
     id: 10,
-    name: "WJeans1",
+    name: "Blue Jeans",
     category: "Jeans",
+    price: "CLP 47.990",
+    size: "40",
     url: W_Jeans_1
 }, {id: 11,
-    name: "WJeans2",
+    name: "Soft Jeans",
     category: "Jeans",
+    price: "CLP 58.990",
+    size: "34",
     url: W_Jeans_2
 }, {
     id: 12,
-    name: "WJeans3",
+    name: "Black Jeans",
     category: "Jeans",
+    price: "CLP 47.990",
+    size: "38",
     url: W_Jeans_3
 }, {
     id: 13, 
-    name: "MShoes1",
+    name: "Ready Boots",
     category: "Shoes",
+    price: "CLP 65.990",
+    size: "41",
     url: M_Shoes_1
 }, {
     id: 14, 
-    name: "MShoes2",
+    name: "Dress Shoes",
     category: "Shoes",
+    price: "CLP 89.990",
+    size: "40",
     url: M_Shoes_2
 }, {
     id: 15,
-    name: "MShoes3",
+    name: "Leather Dress Shoes",
     category: "Shoes",
+    price: "CLP 50.990",
+    size: "41",
     url: M_Shoes_3
 }, {
     id: 16,
-    name: "WShoes1",
+    name: "Md Boots",
     category: "Shoes", 
+    price: "CLP 74.990",
+    size: "38",
     url: W_Shoes_1
 }, {
     id: 17,
-    name: "WShoes2",
+    name: "Casual Sneaker",
     category: "Shoes",
+    price: "CLP 40.990",
+    size: "35",
     url: W_Shoes_2
 }, {
     id: 18,
-    name: "WShoes3",
+    name: "Red Casual Sneaker",
     category: "Shoes",
+    price: "CLP 54.990",
+    size: "36",
     url: W_Shoes_3
 }, {
     id: 19, 
-    name: "MShirt1",
+    name: "Green Shirt",
     category: "Shirt",
+    price: "CLP 65.990",
+    size: "L",
     url: M_Shirt_1
 }, {
     id: 20, 
-    name: "MShirt2",
+    name: "Red Shirt",
     category: "Shirt",
+    price: "CLP 74.990",
+    size: "L",
     url: M_Shirt_2
 }, {
     id: 21, 
-    name: "MShirt3",
+    name: "Real Shirt",
     category: "Shirt",
+    price: "CLP 99.990",
+    size: "L",
     url: M_Shirt_3
 }, {
     id: 22, 
-    name: "WShirt1", 
-    category: "Shirt", 
+    name: "AZR Shirt", 
+    category: "Shirt",
+    price: "CLP 54.990",
+    size: "S", 
     url: W_Shirt_1
 }, {
     id: 23,
-    name: "WShirt2", 
+    name: "White Shirt", 
     category: "Shirt", 
+    price: "CLP 74.990",
+    size: "L",
     url: W_Shirt_2
 }, {
     id: 24, 
-    name: "WShirt3", 
+    name: "Pink Shirt", 
     category: "Shirt",
+    price: "CLP 65.990",
+    size: "M",
     url: W_Shirt_3
 }];
 

@@ -3,122 +3,170 @@ import react from "react"
 
 export const datageneralMKT = [{
     id: 1, 
-    name: "MMJacket1",
+    name: "Jacker LG",
     category: "Jacket",
+    price: "CLP 45.990",
+    size: "S M L XL XXL",
     url: "https://static.zara.net/assets/public/5c1c/5e4e/5f084a8faedb/60d40e192c3a/04204030704-e1/04204030704-e1.jpg?ts=1738321091507&w=750"
 }, {
     id: 2, 
-    name: "MMJacket2",
+    name: "Jacket Blue",
     category: "Jacket",
+    price: "CLP 49.990",
+    size: "S M L XL XXL",
     url: "https://static.zara.net/assets/public/fff0/d599/6acd4b2eb87b/a35c9cbbca11/09621160800-e1/09621160800-e1.jpg?ts=1733309053832&w=750"
 }, {
     id: 3,
-    name: "MMJacket3",
+    name: "Jacket Felt",
     category: "Jacket",
+    price: "CLP 50.990",
+    size: "S M L XL XXL",
     url: "https://static.zara.net/assets/public/356b/2bee/cf124eb182c9/58f5bfb775a3/05388450701-e1/05388450701-e1.jpg?ts=1727878924465&w=750"
 }, {
     id: 4,
-    name: "MWJacket1",
+    name: "D JACKET",
     category: "Jacket",
+    price: "CLP 40.990",
+    size: "XS S M L XL XXL",
     url: "https://static.zara.net/assets/public/bade/bfcc/cd89478baa45/d4d31d9bee00/07622119712-e1/07622119712-e1.jpg?ts=1742217597456&w=750"
 }, {
     id: 5,
-    name: "MWJacket2",
+    name: "Blazer Blue",
     category: "Jacket",
+    price: "CLP 89.990",
+    size: "XS S M L XL XXL",
     url: "https://static.zara.net/assets/public/a82b/605d/f0ab411d9be7/fd496d8ce2bc/07383696800-e1/07383696800-e1.jpg?ts=1740401546661&w=750"
 }, {
     id: 6,
-    name: "MWJacket3",
+    name: "Blazer AR",
     category: "Jacket",
+    price: "CLP 86.990",
+    size: "XS S M L XL XXL",
     url: "https://static.zara.net/assets/public/457f/f074/ad344e5e8a9b/075ed4fc07e3/07420500721-e1/07420500721-e1.jpg?ts=1738225759837&w=750"
 }, {
     id: 7,
-    name: "MMJeans1",
+    name: "Fit Jeans",
     category: "Jeans",
+    price: "CLP 50.990",
+    size: "36 38 40 42 44 46",
     url: "https://static.zara.net/assets/public/4024/4904/973b4a99b4f7/6f1b39b2fc3b/06688400400-000-e1/06688400400-000-e1.jpg?ts=1741854044986&w=750"
 }, {
     id: 8,
-    name: "MMJeans2",
+    name: "Slim Fit Jeans",
     category: "Jeans",
+    price: " CLP 65.990",
+    size: "36 38 40 42 44 46",
     url: "https://static.zara.net/assets/public/3173/0190/07c344ef9f4a/4b9018f986e7/00774340427-e1/00774340427-e1.jpg?ts=1722593597920&w=750"
 }, {
     id: 9, 
-    name: "MMJeans3",
+    name: "Straight Fit Jeans",
     category: "Jeans",
+    price: "CLP 37.990",
+    size: "36 38 40 42 44 46",
     url: "https://static.zara.net/assets/public/c48b/ecf4/de2e4cd3b25d/89774f2feca1/08062310822-e1/08062310822-e1.jpg?ts=1724335844068&w=750"
 }, {
     id: 10,
-    name: "MWJeans1",
+    name: "Mid-Wide-Jeans",
     category: "Jeans",
+    price: "CLP 40.990",
+    size: "32 34 36 38 40 42 44 46",
     url: "https://static.zara.net/assets/public/01a1/be60/aaed439db30e/8e006b1bc9b4/02569047401-000-e1/02569047401-000-e1.jpg?ts=1741020711843&w=750"
 }, {
     id: 11,
-    name: "MWJeans2",
+    name: "Wide Leg Jeans",
     category: "Jeans",
+    price: "CLP 37.990",
+    size: "32 34 36 38 40 42 44 46",
     url: "https://static.zara.net/assets/public/95c7/079a/6d5d4992a812/7eaedbadcaeb/03643218800-e1/03643218800-e1.jpg?ts=1740578829637&w=750"
 }, {
     id: 12,
-    name: "MWJeans3",
+    name: "1975 High Rise Jeans",
     category: "Jeans",
+    price: "CLP 37.990",
+    size: "32 34 36 38 40 42 44 46",
     url: "https://static.zara.net/assets/public/4877/3c35/e25345e0a863/f01003267895/08197057405-e1/08197057405-e1.jpg?ts=1742486747251&w=750"
 }, {
     id: 13,
-    name: "MMShirt",
+    name: "Regular Fit Shirt",
     category: "Shirt",
+    price: "CLP 45.990",
+    size: "S M L XL",
     url: "https://static.zara.net/assets/public/802a/0d03/648942909f6b/831cf8ff21a8/07545710401-e1/07545710401-e1.jpg?ts=1730879517762&w=750"
 }, {
     id: 14,
-    name: "MMShirt2",
+    name: "Striped Shirt",
     category: "Shirt",
+    price: "CLP 45.990",
+    size: "S M L XL",
     url: "https://static.zara.net/assets/public/8d5d/bd28/ee624c03822f/941d04bb5ab7/07545710250-e1/07545710250-e1.jpg?ts=1734349648619&w=750"
 }, {
     id: 15,
-    name: "MMShirt3",
+    name: "Blue Shirt",
     category: "Shirt",
+    price: "CLP 45.990",
+    size: "S M L XL",
     url: "https://static.zara.net/assets/public/a543/3816/ae2946bba2fc/e1b4b163d5f6/07545710403-e1/07545710403-e1.jpg?ts=1734002939319&w=750"
 }, {
     id: 16,
-    name: "MWShirt1",
+    name: "Collar Shirt",
     category: "Shirt",
+    price: "CLP 32.990",
+    size: "XS S M L XL",
     url: "https://static.zara.net/assets/public/0822/0e1e/669f45faaa76/2152f331665c/07665959251-e1/07665959251-e1.jpg?ts=1742466404480&w=750"
 }, {
     id: 17,
-    name: "MWShirt2",
+    name: "Shirt ZW",
     category: "Shirt",
+    price: " CLP 109.990",
+    size: "XS S M L XL",
     url: "https://static.zara.net/assets/public/0a98/073a/b7954adc9620/7ec28cefd694/07166673721-e1/07166673721-e1.jpg?ts=1736417394957&w=1024"
 }, {
     id: 18,
-    name: "MWShirt3",
+    name: "Shirt Popl",
     category: "Shirt",
+    price: "CLP 32.990",
+    size: "XS S M L XL",
     url: "https://static.zara.net/assets/public/be75/541e/0c2f4af6abbf/f287803450f9/02157227403-e1/02157227403-e1.jpg?ts=1725376515205&w=750"
 }, {
     id: 19, 
-    name: "MMShoe1",
+    name: "Sneaker Bk",
     category: "Shoes",
+    price: "CLP 65.990",
+    size: " 39 40 41 42 43 44 45 46 47",
     url: "https://static.zara.net/assets/public/2a04/1a33/294e41d2b7fd/3ff6c1420ee8/12236520800-e1/12236520800-e1.jpg?ts=1738859496093&w=750"
 }, {
     id: 20, 
-    name: "MMShoe2",
+    name: "Casual Sneaker",
     category: "Shoes",
+    price: "CLP 71.990",
+    size: "39 40 41 42 43 44 45 46 47",
     url: "https://static.zara.net/assets/public/224b/c680/56154055a5a2/0a633887a774/12247422800-e1/12247422800-e1.jpg?ts=1722418305333&w=750"
 }, {
     id: 21,
-    name: "MMShoe3",
+    name: "White Casual Shoe",
     category: "Shoes",
+    price: "CLP 41.990",
+    size: "39 40 41 42 43 44 45 46 47",
     url: "https://static.zara.net/assets/public/47b1/b101/4e574d319a65/1b0923d0b05c/12218420001-e1/12218420001-e1.jpg?ts=1726997302640&w=1024"
 }, {
     id:22,
-    name: "MWShoe1",
+    name: "LG Boots",
     category: "Shoes",
+    price: "CLP 43.990",
+    size: "35 36 37 38 39 40 41 42",
     url: "https://static.zara.net/assets/public/d1f7/5315/3001465b9f9f/bcc8bc41414b/12050410800-e1/12050410800-e1.jpg?ts=1725458032638&w=750"
 }, {
     id: 23,
-    name: "MWShoe2",
+    name: "Md Boots",
     category: "Shoes",
+    price: "CLP 65.990",
+    size: "35 36 37 38 39 40 41 42",
     url: "https://static.zara.net/assets/public/5263/2feb/1ad34c02bead/c9e3eeb61ce6/13110410800-ult2/13110410800-ult2.jpg?ts=1725016171301&w=1024"
 }, {
     id: 24, 
-    name: "MWShoe3",
+    name: "5x5 Boots",
     category: "Shoes",
+    price: "CLP 67.990",
+    size: "35 36 37 38 39 40 41 42",
     url: "https://static.zara.net/assets/public/e3a9/ad23/dfa04f71ac0e/5722989c16a9/13127410800-e1/13127410800-e1.jpg?ts=1727875358443&w=750"
 }];

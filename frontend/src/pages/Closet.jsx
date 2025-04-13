@@ -1,29 +1,30 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import CheckboxSelect from "../components/Filter";
 import { datageneral } from "../components/Print";
-import "../styles/Closet.css"
+import "../styles/Closet.css";
+
 
 const App = () => {
     const options = [ 
-        {value: "Jeans", label: "Jeans"},
-        {value: "Shirt", label:"Shirt"},
-        {value: "Jacket", label:"Jacket"},
-        {value:"Shoes", label:"Shoes"}
+        { value: "Jacket", label: "Jacket" },
+        { value: "Shirt", label: "Shirt" },
+        { value: "Jeans", label: "Jeans" },
+        { value: "Shoes", label: "Shoes" }
     ];
-    const [SelectedCategories, setSeletecCategories] = useState([]); // Estado para almacenar selección de filtros
+    const [SelectedCategories, setSelectedCategories] = useState([]);
 
     // Filtrar los productos según la categoría seleccionada
     const filteredProduct = SelectedCategories.length > 0
-        ? datageneral.filter(datageneral => SelectedCategories.includes(datageneral.category))
-        :datageneral;
+        ? datageneral.filter(item => SelectedCategories.includes(item.category))
+        : datageneral;
 
     // Función que actualiza la selección
-    const handlesSelection = (selectedItems) => {
-        setSeletecCategories(selectedItems);
-
+    const handleSelection = (selectedItems) => {
+        setSelectedCategories(selectedItems);
     };
 
     return (
+
         <>
             <div className="closet">
                 <div>
