@@ -47,14 +47,14 @@ export const datageneralMKT = [{
     id: 7,
     name: "Fit Jeans",
     category: "Jeans",
-    price: "50.990",
+    price: "CLP 50.990",
     size: "36 38 40 42 44 46",
     url: "https://static.zara.net/assets/public/4024/4904/973b4a99b4f7/6f1b39b2fc3b/06688400400-000-e1/06688400400-000-e1.jpg?ts=1741854044986&w=750"
 }, {
     id: 8,
     name: "Slim Fit Jeans",
     category: "Jeans",
-    price: "65.990",
+    price: " CLP 65.990",
     size: "36 38 40 42 44 46",
     url: "https://static.zara.net/assets/public/3173/0190/07c344ef9f4a/4b9018f986e7/00774340427-e1/00774340427-e1.jpg?ts=1722593597920&w=750"
 }, {
@@ -117,7 +117,7 @@ export const datageneralMKT = [{
     id: 17,
     name: "Shirt ZW",
     category: "Shirt",
-    price: "109.990",
+    price: " CLP 109.990",
     size: "XS S M L XL",
     url: "https://static.zara.net/assets/public/0a98/073a/b7954adc9620/7ec28cefd694/07166673721-e1/07166673721-e1.jpg?ts=1736417394957&w=1024"
 }, {
