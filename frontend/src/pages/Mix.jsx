@@ -43,7 +43,15 @@ function Mix() {
     return (
         <div className="mix-container">
             <div className="left-container">
-                <h1>Contenedor izquierdo</h1>
+                <h1
+                    key={selectedMktClothing.id}
+                    alt={selectedMktClothing.name}
+                />
+                <img 
+                    src={selectedMktClothing.url}
+                    style={{ cursor: "pointer", width: 500, margin: 10 }}
+                />
+
             </div>
 
             <div className="right-container">
