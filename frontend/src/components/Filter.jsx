@@ -1,74 +1,49 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
+import "../styles/Filter.css"
+import vectorIcon from "../assets/Vector.png";
 
 const CheckboxSelect = ({ options, label = "Select an option", onApply }) => {
   const [selectedOptions, setSelectedOptions] = useState([]);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [searchTerm, setSearchTerm] = useState("");
 
-  // Alterna la visibilidad del menú desplegable
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
-
-  // Maneja la selección de checkboxes
+  // Maneja selección/deselección de opciones
   const handleCheckboxChange = (value) => {
     setSelectedOptions((prev) =>
       prev.includes(value)
-        ? prev.filter((item) => item !== value) // Si está seleccionado, lo quita
-        : [...prev, value] // Si no está seleccionado, lo agrega
+        ? prev.filter((item) => item !== value)
+        : [...prev, value]
     );
   };
 
-  // Aplica la selección
+  // Aplica la selección manualmente al hacer clic
   const handleApply = () => {
     onApply && onApply(selectedOptions);
-    setIsDropdownOpen(false);
   };
-
-  // Filtra las opciones en base al término de búsqueda
-  const filteredOptions = options.filter((option) =>
-    option.label.toLowerCase().includes(searchTerm.toLowerCase())
-  );
 
   return (
     <div className="checkbox-select">
-      <button className="checkbox-select-button" onClick={toggleDropdown}>
-        {selectedOptions.length > 0 ? `${selectedOptions.length} selected` : label}
-      </button>
+      <div className="checkbox-title">
+        <h3>{label}</h3>
+        <img src={vectorIcon} alt="icono filtro" width="24" height="24" />
+      </div>
 
-      {isDropdownOpen && (
-        <div className="checkbox-dropdown">
-          <input
-            type="text"
-            placeholder="Search..."
-            className="checkbox-search"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-          <ul className="checkbox-list">
-            {filteredOptions.length > 0 ? (
-              filteredOptions.map((option) => (
-                <li key={option.value}>
-                  <label>
-                    <input
-                      type="checkbox"
-                      value={option.value}
-                      checked={selectedOptions.includes(option.value)}
-                      onChange={() => handleCheckboxChange(option.value)}
-                    />
-                    {option.label}
-                  </label>
-                </li>
-              ))
-            ) : (
-              <li className="no-results">No results found</li>
-            )}
-          </ul>
-          <button className="apply-button" onClick={handleApply}>
-            Apply
-          </button>
-        </div>
-      )}
+      <ul className="checkbox-list">
+        {options.map((option) => (
+          <li key={option.value} className="checkbox-item">
+            <label>
+              <span>{option.label}</span>
+              <input
+                type="checkbox"
+                value={option.value}
+                checked={selectedOptions.includes(option.value)}
+                onChange={() => handleCheckboxChange(option.value)}
+              />
+            </label>
+          </li>
+        ))}
+      </ul>
+      <button className="apply-button" onClick={handleApply}>
+        Apply Filter
+      </button>
     </div>
   );
 };

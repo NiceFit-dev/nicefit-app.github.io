@@ -3,6 +3,7 @@ import CheckboxSelect from "../components/Filter";
 import { datageneral } from "../components/Print";
 import "../styles/Closet.css";
 
+
 const App = () => {
     const options = [ 
         { value: "Jacket", label: "Jacket" },
@@ -23,25 +24,25 @@ const App = () => {
     };
 
     return (
-        <div className="closet-container"> 
-            {/* Sección izquierda - Sidebar con filtros */}
-            <div className="closet-sidebar">
-                <h2>Filtrar Ropa</h2>
-                <CheckboxSelect options={options} label="Select clothing" onApply={handleSelection} />
-            </div>
 
-            {/* Sección derecha - Galería de imágenes */}
-            <div className="closet-content">
-                <h1>Closet</h1>
-                <p>Este es tu closet o armario</p>
+        <>
+            <div className="closet">
+                <div>
+                    <h1>Closet</h1>
+                    <p>Este es tu closet o armario</p>
+                    <CheckboxSelect options={options} label="Filtros" onApply={handlesSelection} />
+                </div>
 
-                <div className="closet-grid">
-                    {filteredProduct.map((item) => (
-                        <img key={item.id} src={item.url} alt={item.name} />
+                <div className="product-grid">
+                    {filteredProduct.map(product => (
+                        <div key={product.id} className="product-card">
+                            <img src={product.url} alt={product.name} />
+                            <p>{product.name}</p>
+                        </div>
                     ))}
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 

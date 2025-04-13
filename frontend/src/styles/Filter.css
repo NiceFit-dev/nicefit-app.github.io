@@ -2,8 +2,41 @@
 .checkbox-select {
     position: relative;
     display: inline-block;
+    background-color: #FFFFFF;
+    width: 295px;
+
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 20px;
+    border-color: #000000;
+
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05); /* sombra suave */
   }
   
+  .checkbox-title {
+    display: flex;
+    justify-content: space-between; /* separa título e ícono */
+    align-items: center; /* alinea verticalmente */
+    padding-bottom: 24px;
+    font-size: 20px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #0000001A; /* negro con 10% de opacidad */
+  }
+
+  .checkbox-title img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+  
+  
+
   .checkbox-select-button {
     padding: 8px 12px;
     border: 1px solid #ccc;
@@ -33,24 +66,65 @@
   
   .checkbox-list {
     list-style: none;
-    padding: 0;
-    margin: 0;
-    max-height: 150px;
-    overflow-y: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 10px;
+    max-height: auto;
+    
+
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #0000001A; /* negro con 10% de opacidad */
   }
   
   .checkbox-list li {
     margin-bottom: 5px;
   }
   
+  .checkbox-item label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    font-size: 16px;
+    padding: 10px 0;
+    cursor: pointer;
+  }
+  
+  /* Estilizar el checkbox */
+  .checkbox-item input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: black; /* Para navegadores modernos */
+    cursor: pointer;
+  }
+  
+
   .apply-button {
     width: 100%;
-    margin-top: 10px;
-    padding: 8px;
-    background: #007bff;
+    margin-top: 24px;
+    padding-left: 54px;
+    padding-right: 54px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    background: #000000;
     color: white;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 62px;
+
+    /* Transición más suave */
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease;
   }
   
+/* Al pasar el mouse */
+.apply-button:hover {
+  background-color: #333333;
+  transform: scale(1.015);
+}
+
+/* Al hacer clic */
+.apply-button:active {
+  transform: scale(0.97);
+  background-color: #111111;
+}

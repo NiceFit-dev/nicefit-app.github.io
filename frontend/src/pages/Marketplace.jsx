@@ -1,67 +1,48 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; // Importar useNavigate
-import CheckboxSelectMKT from "../components/Filter-Mkt";
+import React, {useState} from "react";
+import CheckboxSelect from "../components/Filter"; //El mismo que ocupa closet, componente reutilizable!
 import { datageneralMKT } from "../components/Print-Mkt";
-import "../styles/Marketplace.css"; // Importar el CSS
+import "../styles/Marketplace.css"
+
 
 const AppMKT = () => {
-    const navigate = useNavigate(); // Hook para la navegación
+  const optionsMKT = [ 
+    { value: "Jeans", label: "Jeans" },
+    { value: "Shirt", label: "Shirt" },
+    { value: "Jacket", label: "Jacket" },
+    { value: "Shoes", label: "Shoes" }
+  ];
 
-    const optionsMKT = [ 
-        
-        { value: "Jacket", label: "Jacket" },
-        { value: "Shirt", label: "Shirt" },
-        { value: "Jeans", label: "Jeans" },
-        { value: "Shoes", label: "Shoes" }
-    ];
+  const [selectedCategories, setSelectedCategories] = useState([]);
 
-    const [SelectedCategoriesMKT, setSelectedCategoriesMKT] = useState([]);
+  const filteredProduct = selectedCategories.length > 0
+    ? datageneralMKT.filter(item => selectedCategories.includes(item.category))
+    : datageneralMKT;
 
-    // Filtrar los productos según la categoría seleccionada
-    const filteredProductMKT = SelectedCategoriesMKT.length > 0
-        ? datageneralMKT.filter(item => SelectedCategoriesMKT.includes(item.category))
-        : datageneralMKT;
+  const handleSelection = (selectedItems) => {
+    setSelectedCategories(selectedItems);
+  };
 
-    // Función que actualiza la selección
-    const handleSelectionMKT = (selectedItems) => {
-        setSelectedCategoriesMKT(selectedItems);
-    };
-
-    // Función para manejar clic en la imagen y redirigir a Mix.jsx con la prenda seleccionada
-    const handleImageClick = (item) => {
-        navigate("/mix", { state: { selectedMktClothing: item, category: item.category } }); 
-    };
-
-    return (
-        <div className="marketplace-container"> 
-            {/* Sección izquierda - Sidebar con filtros */}
-            <div className="marketplace-sidebar">
-                <h2>Filtrar Ropa</h2>
-                <CheckboxSelectMKT 
-                    options={optionsMKT} 
-                    label="Select clothing" 
-                    onApply={handleSelectionMKT} 
-                />
-            </div>
-
-            {/* Sección derecha - Galería de imágenes */}
-            <div className="marketplace-content">
-                <h1>Marketplace</h1>
-                <p>Este es tu marketplace</p>
-
-                <div className="marketplace-grid">
-                    {filteredProductMKT.map((item) => (
-                        <img 
-                            key={item.id} 
-                            src={item.url} 
-                            alt={item.category} 
-                            onClick={() => handleImageClick(item)} 
-                        />
-                    ))}
-                </div>
-            </div>
+  return (
+    <>
+      <div className="marketplace">
+        <div>
+          <h1>Marketplace</h1>
+          <p>Este es tu marketplace</p>
+          <CheckboxSelect options={optionsMKT} label="Select clothing" onApply={handleSelection} />
         </div>
-    );
+        <div className="product-grid">
+          {filteredProduct.map(product => (
+            <div key={product.id} className="product-card">
+              <img src={product.url} alt={product.name} />
+              <p>{product.name}</p>
+            </div>
+            ))}
+        </div>
+
+      </div>
+      
+    </>
+  );
 };
 
 export default AppMKT;
