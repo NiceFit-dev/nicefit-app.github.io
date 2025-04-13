@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useLocation } from "react-router-dom"; // Importamos useLocation
 import { datageneral } from "../components/Print";
 import "../styles/Mix.css";
+import { datageneralMKT } from "../components/Print-Mkt";
 
 function Mix() {
     const location = useLocation();
@@ -43,14 +44,26 @@ function Mix() {
     return (
         <div className="mix-container">
             <div className="left-container">
-                <h1
-                    key={selectedMktClothing.id}
-                    alt={selectedMktClothing.name}
-                />
-                <img 
-                    src={selectedMktClothing.url}
-                    style={{ cursor: "pointer", width: 500, margin: 10 }}
-                />
+                <div>
+                    <h1
+                        key={selectedMktClothing.id}
+                        alt={selectedMktClothing.name}
+                    />
+                    <img 
+                        src={selectedMktClothing.url}
+                        style={{ cursor: "pointer", width: 500, margin: 10 }}
+                    />
+                    
+                    <p><strong>Precio:</strong> {selectedMktClothing.price}</p>
+                    <p><strong>Categoría:</strong> {selectedMktClothing.category}</p>
+                    <p><strong>Categoría:</strong> {selectedMktClothing.size}</p>
+                    
+
+                </div>
+                
+                
+              
+
 
             </div>
 
